@@ -9,16 +9,15 @@ def initiate():
         {"name": "Kia", "description": "Great cars. Korean technology"},
         {"name": "Toyota", "description": "Great cars. Japanese technology"},
     ]
- 
+
     car_make_instances = []
     for data in car_make_data:
-            car_make_instances.append(
-                CarMake.objects.create(
-                    name=data['name'],
-                    description=data['description']
-                )
+        car_make_instances.append(
+            CarMake.objects.create(
+                name=data['name'],
+                description=data['description']
             )
-
+        )
 
     # Create CarModel instances with the corresponding CarMake instances
     car_model_data = [
@@ -43,7 +42,7 @@ def initiate():
       {
         "name": "A-Class",
         "type": "SUV",
-        "year": 2023, 
+        "year": 2023,
         "car_make": car_make_instances[1]
         },
       {
@@ -112,7 +111,6 @@ def initiate():
         "year": 2023,
         "car_make": car_make_instances[4]
         },
-        # Add more CarModel instances as needed
     ]
 
     for data in car_model_data:
